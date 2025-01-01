@@ -5,11 +5,12 @@ This is hand writing transcription of https://thatonegamedev.com/cpp/hello-bgfx/
 ## Build
 
 ```sh
+./prepare.sh # Only first time
 ./build.sh
 ```
 
 ## Run
 
 ```sh
-./build/triangle/big2_example_main
+./run.sh
 ```
