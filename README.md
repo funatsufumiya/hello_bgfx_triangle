@@ -22,3 +22,7 @@ This is hand writing transcription of https://thatonegamedev.com/cpp/hello-bgfx/
 - [x] GLFW + bgfx basic (`./run.sh basic`)
 - [x] Triangle (`./run.sh triangle`)
 - [x] Triangle Alt for examinig bgfx API (`./run.sh triangle_alt`)
+- [x] Triangle Debug1 (`./run.sh triangle_debug1`)
+    - NOTE: this example shows wireframe triangle.
+- [x] Triangle Debug2 (`./run.sh triangle_debug2`)
+    - NOTE: this example arbitrarily add corupted program and see stats.
