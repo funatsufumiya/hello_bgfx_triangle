@@ -85,11 +85,11 @@ int main(int, char**)
     // show is valid shader
     if (bgfx::isValid(program))
     {
-        std::cout << "program is valid" << std::endl;
+        std::cout << "program is valid: (idx = " << (int)program.idx << ")" << std::endl;
     }
     else
     {
-        std::cout << "program is invalid" << std::endl;
+        std::cout << "program is invalid: (idx = " << (int)program.idx << ")" << std::endl;
     }
 
     bgfx::VertexLayout color_vertex_layout;
