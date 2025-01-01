@@ -89,6 +89,10 @@ int main(int, char**)
                     0, 1, 2,
             };
 
+    // debug log sizeof(kTriangleVertices) and sizeof(kTriangleIndices)
+    std::cout << "sizeof(kTriangleVertices): " << sizeof(kTriangleVertices) << std::endl;
+    std::cout << "sizeof(kTriangleIndices): " << sizeof(kTriangleIndices) << std::endl;
+
     bgfx::VertexBufferHandle vertex_buffer = bgfx::createVertexBuffer(bgfx::makeRef(kTriangleVertices, sizeof(kTriangleVertices)), color_vertex_layout);
     bgfx::IndexBufferHandle index_buffer = bgfx::createIndexBuffer(bgfx::makeRef(kTriangleIndices, sizeof(kTriangleIndices)));
 
