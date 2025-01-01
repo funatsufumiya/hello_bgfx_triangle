@@ -19,5 +19,6 @@ This is hand writing transcription of https://thatonegamedev.com/cpp/hello-bgfx/
 ## Status
 
 - [x] GLFW only (`./run.sh glfw_only`)
-- [ ] GLFW + bgfx basic (`./run.sh basic`)
-- [ ] Triangle (`./run.sh triangle`)
+- [x] GLFW + bgfx basic (`./run.sh basic`)
+- [x] Triangle (`./run.sh triangle`)
+- [x] Triangle Alt for examinig bgfx API (`./run.sh triangle_alt`)
