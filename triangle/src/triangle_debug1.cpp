@@ -72,6 +72,16 @@ int main(int, char**)
             true
     );
 
+    // show is valid shader
+    if (bgfx::isValid(program))
+    {
+        std::cout << "program is valid" << std::endl;
+    }
+    else
+    {
+        std::cout << "program is invalid" << std::endl;
+    }
+
     bgfx::VertexLayout color_vertex_layout;
     color_vertex_layout.begin()
                     .add(bgfx::Attrib::Position, 2, bgfx::AttribType::Float)
