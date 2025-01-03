@@ -7,6 +7,7 @@
 #include <generated/shaders/triangle/all.h>
 
 #include <glm/glm.hpp>
+#include <bgfx/platform.h>
 
 struct NormalColorVertex
 {
@@ -42,6 +43,8 @@ int main(int, char**)
         glfwTerminate();
         return 1;
     }
+
+    bgfx::renderFrame();
 
     bgfx::Init init_object;
     big2::SetNativeWindowData(init_object, window);

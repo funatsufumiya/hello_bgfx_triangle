@@ -9,18 +9,20 @@
 #include <glm/glm.hpp>
 #include <bgfx/platform.h>
 
+#include "shader_loader.hpp"
+
 struct NormalColorVertex
 {
     glm::vec2 position;
     uint32_t color;
 };
 
-static const bgfx::EmbeddedShader kEmbeddedShaders[] =
-    {
-        BGFX_EMBEDDED_SHADER(vs_basic),
-        BGFX_EMBEDDED_SHADER(fs_basic),
-        BGFX_EMBEDDED_SHADER_END()
-    };
+// static const bgfx::EmbeddedShader kEmbeddedShaders[] =
+//     {
+//         BGFX_EMBEDDED_SHADER(vs_basic),
+//         BGFX_EMBEDDED_SHADER(fs_basic),
+//         BGFX_EMBEDDED_SHADER_END()
+//     };
 
 static void GlfwErrorCallback(int error, const char* description)
 {
@@ -69,8 +71,8 @@ int main(int, char**)
 
     bgfx::RendererType::Enum renderer_type = bgfx::getRendererType();
     bgfx::ProgramHandle program = bgfx::createProgram(
-            bgfx::createEmbeddedShader(kEmbeddedShaders, renderer_type, "vs_basic"),
-            bgfx::createEmbeddedShader(kEmbeddedShaders, renderer_type, "fs_basic"),
+            shader_utils::ShaderLoader::loadShader("basic", shader_utils::ShaderType::Vertex),
+            shader_utils::ShaderLoader::loadShader("basic", shader_utils::ShaderType::Fragment),
             true
     );
 
@@ -121,16 +123,12 @@ int main(int, char**)
         // Ensure the view is redrawn even if no graphic commands are called
         bgfx::touch(main_view_id);
 
-        // bgfx::setState(
-        //     BGFX_STATE_WRITE_R
-        //             | BGFX_STATE_WRITE_G
-        //             | BGFX_STATE_WRITE_B
-        //             | BGFX_STATE_WRITE_A
-        // );
         bgfx::setState(
-            BGFX_STATE_WRITE_RGB | BGFX_STATE_WRITE_A
+            BGFX_STATE_WRITE_R
+                    | BGFX_STATE_WRITE_G
+                    | BGFX_STATE_WRITE_B
+                    | BGFX_STATE_WRITE_A
         );
-        // bgfx::setState(BGFX_STATE_DEFAULT);
 
         bgfx::setVertexBuffer(0, vertex_buffer);
         bgfx::setIndexBuffer(index_buffer); // not needed if you don't do indexed draws

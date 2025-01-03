@@ -5,8 +5,7 @@ This is hand writing transcription of https://thatonegamedev.com/cpp/hello-bgfx/
 ## Build
 
 ```sh
-./cmake_init_single_thread.sh # Only first time, for mac (metal)
-# ./cmake_init_multi_thread.sh # Only first time, for win/linux
+./cmake_init.sh # Only first time
 ./build.sh
 ```
 

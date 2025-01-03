@@ -2,6 +2,7 @@
 #include <iostream>
 #include <big2.h>
 #include <cstdint>
+#include <bgfx/platform.h>
 
 static void GlfwErrorCallback(int error, const char* description)
 {
@@ -24,6 +25,8 @@ int main(int, char**)
         glfwTerminate();
         return 1;
     }
+
+    bgfx::renderFrame();
 
     bgfx::Init init_object;
     big2::SetNativeWindowData(init_object, window);
