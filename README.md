@@ -25,3 +25,7 @@ This is hand writing transcription of https://thatonegamedev.com/cpp/hello-bgfx/
     - NOTE: this example shows wireframe triangle.
 - [x] Triangle Debug2 (`./run.sh triangle_debug2`)
     - NOTE: this example arbitrarily add corupted program and see stats.
+
+## License
+
+hello_bgfx_triangle and dependency (big2-stack) are licensed under the Unlicense. see [LICENSE](LICENSE)
