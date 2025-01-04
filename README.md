@@ -35,7 +35,7 @@ This is hand writing transcription of https://thatonegamedev.com/cpp/hello-bgfx/
 
 ## Compiling Shaders
 
-NOTE: This only needs for Triangle Runtime Shader example.
+NOTE: This is only needed for Triangle Runtime Shader example.
 
 - firstly, install bgfx-tools from [for mac](https://www.lwjgl.org/browse/release/3.3.5/macosx/arm64/bgfx-tools), [for win](https://www.lwjgl.org/browse/release/3.3.5/windows/x64/bgfx-tools) or [for linux](https://www.lwjgl.org/browse/release/3.3.5/linux/x64/bgfx-tools)
     - after downloading, please copy `shaderc` to `PATH` directory
