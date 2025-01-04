@@ -41,6 +41,10 @@ NOTE: This is only needed for Triangle Runtime Shader example.
     - after downloading, please copy `shaderc` to `PATH` directory
     - (for windows, please use git bash)
 
+```bash
+bash ./scripts/compile_shaders.sh
+```
+
 ## License
 
 hello_bgfx_triangle and dependency (big2-stack) are licensed under the Unlicense. see [LICENSE](LICENSE)
